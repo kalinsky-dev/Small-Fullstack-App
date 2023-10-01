@@ -3,17 +3,17 @@ const express = require('express');
 const products = [
   {
     id: 'asdf1',
-    name: 'Product1',
+    name: 'Product 1',
     price: 110,
   },
   {
     id: 'asdf2',
-    name: 'Product2',
+    name: 'Product 2',
     price: 75,
   },
   {
     id: 'asdf3',
-    name: 'Product3',
+    name: 'Product 3',
     price: 165,
   },
 ];
