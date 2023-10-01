@@ -9,7 +9,7 @@ const products = [
   {
     id: 'asdf2',
     name: 'Product 2',
-    price: 75,
+    price: 125,
   },
   {
     id: 'asdf3',
