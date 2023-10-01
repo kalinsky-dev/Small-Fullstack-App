@@ -43,6 +43,11 @@ app.get('/data', (req, res) => {
   res.json(products);
 });
 
+app.get('/data/:id', (req, res) => {
+  const item = products.find((x) => x.id == req.params.id);
+  res.json(item);
+});
+
 // UPDATE
 
 // DELETE
