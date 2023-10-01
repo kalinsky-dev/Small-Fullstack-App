@@ -69,6 +69,7 @@ async function createProduct(event) {
       body: JSON.stringify(data),
     });
     const item = await res.json();
+    form.reset();
     createRow(item);
   }
 }
