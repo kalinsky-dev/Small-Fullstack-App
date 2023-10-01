@@ -35,7 +35,7 @@ app.post('/data', (req, res) => {
   // console.log(record);
 
   products.push(record);
-  res.status(201).end();
+  res.status(201).json(record);
 });
 
 // READ
@@ -44,5 +44,7 @@ app.get('/data', (req, res) => {
 });
 
 // UPDATE
+
+// DELETE
 
 app.listen(3000);
