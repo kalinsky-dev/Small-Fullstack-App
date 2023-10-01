@@ -16,7 +16,7 @@ app.get('/data', (req, res) => {
     },
     {
       name: 'Product3',
-      price: 16,
+      price: 165,
     },
   ]);
 });
