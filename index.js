@@ -5,7 +5,20 @@ const app = express();
 app.use(express.static('static'));
 
 app.get('/data', (req, res) => {
-  res.json({ message: 'hello' });
+  res.json([
+    {
+      name: 'Product1',
+      price: 110,
+    },
+    {
+      name: 'Product2',
+      price: 75,
+    },
+    {
+      name: 'Product3',
+      price: 16,
+    },
+  ]);
 });
 
 app.listen(3000);
