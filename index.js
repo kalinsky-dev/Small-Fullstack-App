@@ -46,5 +46,10 @@ app.get('/data', (req, res) => {
 // UPDATE
 
 // DELETE
+app.delete('/data/:id', (req, res) => {
+  const itemIndex = products.findIndex((x) => x.id == req.params.id);
+  products.splice(itemIndex, 1);
+  res.status(202).end();
+});
 
 app.listen(3000);

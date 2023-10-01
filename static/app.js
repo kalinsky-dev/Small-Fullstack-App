@@ -47,9 +47,11 @@ async function deleteItem(event) {
   if (event.target.tagName == 'A') {
     const id = event.target.parentNode.id;
     // console.log(id);
-    await fetch('http://localhost:3000/data' + id, {
+    const res = await fetch('http://localhost:3000/data/' + id, {
       method: 'DELETE',
     });
-    event.target.parentNode.remove();
+    if (res.ok) {
+      event.target.parentNode.remove();
+    }
   }
 }
