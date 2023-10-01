@@ -14,7 +14,7 @@ body {
   box-shadow: -15px 17px 30px -3px rgba(18, 142, 206, 0.49);
   padding: 35px;
   border-radius: 22px;
-  width: 600px;
+  width: 650px;
   text-align: center;
 }
 
@@ -44,6 +44,10 @@ input {
 
 input:hover {
   border: 2px solid rgb(63, 170, 252);
+}
+
+label{
+  font-size: 20px;
 }
 
 li {
