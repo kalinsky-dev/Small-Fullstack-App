@@ -112,5 +112,5 @@ async function editItem(id) {
   currentId = id;
   editMode = true;
   formBtn.textContent = 'Edit Product';
-  // list.innerHTML = '';
+  list.innerHTML = '';
 }
