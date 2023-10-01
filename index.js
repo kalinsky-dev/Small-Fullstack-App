@@ -27,8 +27,8 @@ app.get('/data', (req, res) => {
 
 app.post('/data', (req, res) => {
   console.log(req.body);
-
-  res.end();
+  products.push(req.body);
+  res.status(201).end();
 });
 
 app.listen(3000);
