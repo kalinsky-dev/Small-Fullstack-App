@@ -33,7 +33,6 @@ app.post('/data', (req, res) => {
     price: Number(req.body.price),
   };
   // console.log(record);
-
   products.push(record);
   res.status(201).json(record);
 });
@@ -49,6 +48,12 @@ app.get('/data/:id', (req, res) => {
 });
 
 // UPDATE
+app.put('/data/:id', (req, res) => {
+  const item = products.find((x) => x.id == req.params.id);
+  item.name = req.body.name;
+  item.price = Number(req.body.price);
+  res.status(202).end();
+});
 
 // DELETE
 app.delete('/data/:id', (req, res) => {
