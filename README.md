@@ -27,3 +27,5 @@ To run Small-Fullstack-App locally, follow these steps:
 - `npm start`
 
 That's it! You can now start CRYPTO-TRADE Application on your local machine at http://localhost:3000/.
+
+![app](./screenshots/Server.png)
