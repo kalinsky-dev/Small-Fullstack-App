@@ -1,4 +1,4 @@
-document.querySelector('button').addEventListener('click', loadProducts);
+document.querySelector('#load').addEventListener('click', loadProducts);
 document.querySelector('form').addEventListener('submit', createProduct);
 const list = document.querySelector('ul');
 
@@ -18,5 +18,12 @@ async function createProduct(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
-  console.log(data);
+  // console.log(data);
+  fetch('http://localhost:3000/data', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
 }

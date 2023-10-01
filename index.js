@@ -18,9 +18,17 @@ const products = [
 const app = express();
 
 app.use(express.static('static'));
+// Parse the body of the request
+app.use(express.json());
 
 app.get('/data', (req, res) => {
   res.json(products);
+});
+
+app.post('/data', (req, res) => {
+  console.log(req.body);
+
+  res.end();
 });
 
 app.listen(3000);
