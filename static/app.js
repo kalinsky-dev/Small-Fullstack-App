@@ -1,4 +1,5 @@
 document.querySelector('button').addEventListener('click', loadProducts);
+document.querySelector('form').addEventListener('submit', createProduct);
 const list = document.querySelector('ul');
 
 async function loadProducts() {
@@ -11,4 +12,11 @@ async function loadProducts() {
     li.textContent = `${item.name} - $ ${item.price}`;
     list.appendChild(li);
   }
+}
+
+async function createProduct(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  console.log(data);
 }
